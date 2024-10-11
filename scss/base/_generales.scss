@@ -1,0 +1,95 @@
+@import "../utilidades/variables";
+
+/* estilos generales */
+header{
+    width: 100%;
+    nav{
+        background-color: $color-primario;
+        .container-fluid{
+            .logo{
+                border-radius: 15%;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: .5s;
+                }
+            }
+            button{
+                background-image:linear-gradient(#F8B179, #DA9B6B);
+                border-radius: 5%;
+                border-style: unset;
+                padding: 5px;
+                &:hover{
+                    transform: scale(1.05);
+                    transition: .5s;
+                }
+                a{
+                    color: black;
+                }
+            }
+            div{
+                ul{
+                    .nav-item{
+                        border-bottom: 1px solid $color-terciario;
+                        .nav-link{
+                            color: #80878B;
+                            &:hover{
+                                color: #99A7AA;
+                                transition: .5s;
+                                padding-right: 1rem;
+                                padding-left: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px){ 
+    header{
+        nav{
+            .container-fluid{
+                display: flex;
+                gap: 7rem;
+            }
+        } 
+     } 
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+    background-color: $color-secundario;
+    color: #CCD0CF;
+    padding-top: 60px;
+    img{
+        border-radius: $borde-redondeado;
+        border: 3px solid $color-llamativo;
+    }
+}
+
+span{
+    color: $color-llamativo;
+}
+
+h5{
+    color: #99A7AA;
+}
+
+iframe{
+    border-radius: $borde-redondeado;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem;
+    background-color: $color-primario;
+    text-align: center;
+    color: #80878B;
+    gap: 1rem;
+}
+

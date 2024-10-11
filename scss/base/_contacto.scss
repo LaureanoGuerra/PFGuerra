@@ -1,0 +1,81 @@
+@import "../utilidades/mixin";
+@import "../utilidades/variables";
+
+/* estilos de contacto mobile */
+.contacto-main{
+    @include grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    div{
+        img{
+            border:none;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        h1{
+            padding-bottom: 1.5rem;
+        }
+    }
+    #redes-sociales{
+            img{
+                width:13%;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: .5s;
+                    margin-right: .5rem;
+                    margin-left: .5rem;
+                }
+            }
+    }
+}
+
+/* estilos de contacto tablet */
+@media screen and (min-width:600px){
+    .contacto-main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        #contacto-1{
+            grid-column: span 2;
+            border-bottom: 2px solid $color-terciario;
+            padding: 1rem;
+        }
+        div{
+            iframe{
+                margin-bottom: 1rem;
+            }
+        }
+        #redes-sociales{
+            img{
+                width:14%
+            }
+    }
+    }
+}
+
+/* estilos de contacto desktop */
+@media screen and (min-width:1024px){
+    .contacto-main{
+        grid-template-rows: repeat(2, 225px);
+        #contacto-1{
+            grid-column: span 1;
+            border-bottom: none;
+            border-right: 2px solid $color-terciario;
+        }
+        #iframe-div{
+            grid-row: span 2;
+            align-self: center;
+        }
+        #redes-sociales{
+            border-top: 2px solid $color-terciario;
+            border-right: 2px solid $color-terciario;
+            padding-top: 1rem;
+            img{
+                width:10%;
+            }
+        }
+    }
+}
